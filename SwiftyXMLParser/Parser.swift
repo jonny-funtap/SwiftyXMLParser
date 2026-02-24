@@ -69,7 +69,8 @@ extension XML {
             let parentNode = stack.last
 
             // Kouichi Akamatsu: ※ `parentElement` は `weak` で宣言されいるので大丈夫そうな気がするものの、循環参照?でメモリリークを起こす。そのため、原因が未だ不明。\
-    また、parentElementはログの出力でしか使っていないので、安心してコメントアウトして良い（v5.6.0時点）。
+            // また、parentElementはログの出力でしか使っていないので、安心してコメントアウトして良い（v5.6.0時点）。
+            
             // node.parentElement = parentNode
             
             parentNode?.childElements.append(node)
